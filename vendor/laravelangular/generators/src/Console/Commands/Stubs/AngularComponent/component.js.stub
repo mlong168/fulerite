@@ -1,0 +1,17 @@
+class {{StudlyName}}Controller{
+    constructor(){
+        'ngInject';
+
+        //
+    }
+
+    $onInit(){
+    }
+}
+
+export const {{StudlyName}}Component = {
+    templateUrl: './views/app/components/{{name}}/{{name}}.component.html',
+    controller: {{StudlyName}}Controller,
+    controllerAs: 'vm',
+    bindings: {}
+}

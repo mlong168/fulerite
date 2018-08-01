@@ -1,0 +1,24 @@
+{
+    "name": "laravelangular/generators",
+    "description": "Angular generators for Artisan",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alessandro Rovito",
+            "email": "alessandro.rovito@gmail.com"
+        },
+        {
+            "name": "Jad Joubran",
+            "email": "joubran.jad@gmail.com"
+        }
+    ],
+    "require": {
+        "illuminate/console": "5.1.* || 5.2.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaravelAngular\\Generators\\": "src"
+        }
+    },
+    "minimum-stability": "dev"
+}

@@ -1,0 +1,73 @@
+<section class="content-header">
+  <h1>Users Roles<small>Module description here</small></h1>
+  <ol class="breadcrumb">
+    <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>
+    <li><a ui-sref="app.datasources">Datasources</a></li>
+    <li class="active">Add Datasource</li>
+  </ol>
+</section>
+<section class="content">
+  <div class="row">
+    <div class="col-sm-12 col-md-7">
+      <div class="box box-primary">
+        <div class="box-header with-border">
+          <h3 class="box-title">Add Datasource</h3>
+        </div>
+        <form class="form-horizontal" name="datasourceForm" ng-submit="vm.save(datasourceForm.$valid, datasourceForm)" novalidate>
+          <div class="box-body">
+            <div ng-if="vm.alerts" class="alert alert-{{alert.type}}" ng-repeat="alert in vm.alerts">
+              <h4>{{alert.title}}</h4>
+              <p>{{alert.msg}}</p>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.driver.$invalid && ( vm.formSubmitted || datasourceForm.driver.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">Driver</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.driver" name="driver" placeholder="Driver" required>
+                <p ng-show="datasourceForm.driver.$error.required && ( vm.formSubmitted || datasourceForm.driver.$touched)" class="help-block">Driver is required.</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.alias.$invalid && ( vm.formSubmitted || datasourceForm.alias.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">Alias</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.alias" name="alias" placeholder="Alias" required>
+                <p ng-show="datasourceForm.alias.$error.required && ( vm.formSubmitted || datasourceForm.alias.$touched)" class="help-block">Alias is required.</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.db_name.$invalid && ( vm.formSubmitted || datasourceForm.db_name.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">DB Name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.db_name" name="db_name" placeholder="DB Name" required>
+                <p ng-show="datasourceForm.db_name.$error.required && ( vm.formSubmitted || datasourceForm.db_name.$touched)" class="help-block">DB name is required.</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.port.$invalid && ( vm.formSubmitted || datasourceForm.port.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">Port</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.port" name="port" placeholder="Port" required>
+                <p ng-show="datasourceForm.port.$error.required && ( vm.formSubmitted || datasourceForm.port.$touched)" class="help-block">Port is required.</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.username.$invalid && ( vm.formSubmitted || datasourceForm.username.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">User name</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.username" name="username" placeholder="User Name" required>
+                <p ng-show="datasourceForm.username.$error.required && ( vm.formSubmitted || datasourceForm.username.$touched)" class="help-block">Username is required.</p>
+              </div>
+            </div>
+            <div class="form-group" ng-class="{ 'has-error': datasourceForm.password.$invalid && ( vm.formSubmitted || datasourceForm.password.$touched) }">
+              <label for="inputEmail3" class="col-sm-2 control-label">Password</label>
+              <div class="col-sm-10">
+                <input type="text" class="form-control" ng-model="vm.password" name="password" placeholder="Password" required>
+                <p ng-show="datasourceForm.password.$error.required && ( vm.formSubmitted || datasourceForm.password.$touched)" class="help-block">Password is required.</p>
+              </div>
+            </div>
+          </div>
+          <div class="box-footer">
+            <a ui-sref="app.datasources" class="btn btn-default"><i class="fa fa-angle-double-left"></i> Back</a>
+            <button type="submit" class="btn btn-primary pull-right">Add New</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

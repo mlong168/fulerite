@@ -1,0 +1,8 @@
+export class {{StudlyName}}Service{
+    constructor(){
+        'ngInject';
+
+        //
+    }
+}
+
