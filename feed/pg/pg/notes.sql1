@@ -1,0 +1,1002 @@
+/*
+ Navicat Premium Data Transfer
+
+ Source Server         : gisserver3
+ Source Server Type    : PostgreSQL
+ Source Server Version : 80413
+ Source Host           : 192.168.10.63
+ Source Database       : frdata
+ Source Schema         : public
+
+ Target Server Type    : PostgreSQL
+ Target Server Version : 80413
+ File Encoding         : utf-8
+
+ Date: 06/19/2018 09:35:17 AM
+*/
+
+-- ----------------------------
+--  Table structure for "notes"
+-- ----------------------------
+DROP TABLE IF EXISTS "notes";
+CREATE TABLE "notes" (
+	"key" int4,
+	"txt" varchar(512),
+	"seq" int4,
+	"user-code" varchar(16),
+	"last-date" date,
+	"note-cat" varchar(12),
+	"cur-status" varchar(2),
+	"f-date" date,
+	"f-done" bool
+)
+WITH (OIDS=FALSE);
+ALTER TABLE "notes" OWNER TO "postgres";
+
+-- ----------------------------
+--  Records of "notes"
+-- ----------------------------
+BEGIN;
+INSERT INTO "notes" VALUES ('20208', 'I-91 Exit 8 for Route 80/Foxon Road/Middletown Avenue.  ¼ mile West. 
+Site is on the right.
+
+', '5', 'mmueller', '2018-06-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23354', 'I-95 to Exit 93, North side of highway.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20214', 'I-95 at Exit 56 N/W of I-95', '3', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20008', 'I-95 at Exit 40, South side of I-95', '10', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20196', 'On East Side of Route 5, 1/2 mile South of Junction of Route 68', '2', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22593', 'I-91 at Exit 16 East side of I-91.
+', '1', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20173', 'I-84 Exit 4 right off Exit on left.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20035', 'I-95 Exit 6 North on Harvard. Right on West Main Street.
+', '2', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20234', 'I-84 Exit 34 to West on Route 372. 1/2 mile on right.
+', '1', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20039', 'I-84 at Exit 63 straight on Route 83 South.
+', '2', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22599', 'I-384 Exit 2. East on Hartford Road.
+', '2', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20271', 'I-91 Exit 13 onto Route 5 South. 1/4 mile on right.
+', '2', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22601', 'I-84 Exit 38 on Route 4 West past Route10.
+', '1', 'MDEVINO', '2012-11-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23719', 'I-65 EXIT 299
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23721', 'I-40, EXIT 161
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23723', 'I-10, EXIT 203, TOLTEC RD.
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23724', 'I-40, EXIT 48
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23725', 'I-10 & 339TH AVE., EXIT 103
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23726', 'I-10, 1501 FORT GRANT RD., EXIT 340
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23727', 'I-15 & LENWOOD ROAD, EXIT 69
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23728', 'I-5, HIGHWAY 58
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23729', 'I-10 AT DILLON RD. EXIT
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23730', 'I-5 AT SOUTH AVENUE, EXIT 630
+', '5', 'mmueller', '2012-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22344', '', '3', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22756', 'I-84 Exit 71.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24008', 'I-395 Exit 18, 2 miles South on Route 97.
+', '1', 'mmueller', '2018-06-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20101', 'Southbound: I-95 Exit 6. Northbound: I-95 Exit 6, left at 2nd light.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20258', 'I-84 Exit 5. Right off Exit onto Main Street. 1 Mile on left.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24009', 'I-395 Exit 28. East side of I-395.  Site on the left.
+
+', '1', 'mmueller', '2018-06-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22762', 'On Route 4. 6 miles East of Route 8, Exit 42.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20095', '1/2 mile South of New Milford Bridge on Route 7.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23132', 'On Route 66 between Route 17 and Route 16. 3 miles East of Portland Bridge.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24010', 'I-95 Exit 82, 2 miles. Route 85 North.  Site on the right.
+I-395 Exit 2, 1 mile. Route 85 South.  Site on the left.
+
+', '1', 'mmueller', '2018-06-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22600', 'Route 8 Exit 22, 1/2 East on Route 67.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23339', 'I-84 Exit 37 East 2 miles
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22733', 'I-95 NB: Exit 30 / Lordship Blvd., bear right, on right. 
+I-95 SB: Exit 30 / Surf and Lordship, left off exit, left on Lordship, on Right.
+', '1', 'mmueller', '2014-03-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24011', 'On Route 8 at Junction of Route 20, 2 miles North of Route 44.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20296', 'On Old Route 7. 1/2 mile North of Super 7 Connector and Junction of Route 123. South of Merritt Parkway.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20211', 'On Route 6. 8 miles West of Williamatic.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22668', 'I-84 Exit 10, Next to Diner.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20263', 'I-84, Exit 28 (East side of I-84)
+', '6', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20268', 'Airport Connector to Old Country Road N (or next exit on to Route 75 N) to right on Spring Street. 1/8th mile on left.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24012', 'I-91 to Exit 47, 5 Miles East on Route 190.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22283', 'Northbound: I-95 Exit 56. Left at end of ramp, right at light, on the rught. Southbound: I-95 Exit 56. Left at light, on the left.', '2', 'MDEVINO', '2013-01-29', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23505', 'Northbound: I-95 Exit 30. Left at end of off Exit ramp. Southbound: I-95 Exit 30. Left off end of Exit ramp, then right at light.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20145', 'I-91 Exit 35B. Route 218 East for 1/2 mile. Route 159 for 1/4 mile.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20217', 'I-91 Exit 8. East on Route 80. 1 mile to top of the hill on left.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20306', 'I-84 East Exit 53 Bear Right, Left off ramp right on Darlin. I-84 West Exit 55, Right on Darlin.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20077', 'Route 9 North Exit 18, South Exit 19 Route 372 East to Route 99 South.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20067', 'Route 8 Exit 38. South on Route 6 for 1/2 mile. On left.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20285', 'I-395 Exit 9 onto Route 2A. 1/2 mile to Exit 1 on Route 32 North.
+', '2', 'mmueller', '2018-06-11', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23050', 'I-85 Exit 149.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23053', 'I-90/I-94 Exit 15B.
+', '3', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20082', 'I-290 Exit 23. 1/2 mile North Route 140.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20114', 'I-90 or I-291 Exit 6: Burnett Road. On the right.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24013', 'I-495 Exit 14A, 5 miles on Route 1 N. I-95 Exit 9, 3 miles on Route 1 S.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22316', 'On Route 7, North of Town Center.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20139', 'I-90 Exit 2 to Route 102 South/West for 2 miles. On right. (2 miles from I-90 or from Route 7.)
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20336', 'I-190 Exit 7. 1/4 mile West on Route 117.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22501', 'Lexington is just North of Exit 30 / 30A and just North of Route 2.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20065', 'From the South: I-93 Exit 29. Follow Mystic Avenue towards Medford (1 mile). From the North: I-93 Exit 30. Right off ramp - on left.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24014', 'On Rt 146 Southbound, 2 Miles from I-90/Rt 20.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22500', 'Newton is just South of Exit 22 and just South of the Mass Pike.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22677', 'Route 20 between I-84 and I-395.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20128', 'Just off of Route 2. Exit 16 on Route 202 South.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20233', 'I-95 N Exit 44B (Exit reads Rt 1 N and 129, Danvers), follow Rt 1 N - Danvers. I-95 S Exit 44 (Exit reads Rt 1 N) Follow Rt 1 N. Station is 1/8 mile on right.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24015', 'Merril Road is at Junction of Route 9 and 8, 1/4 mile South. 2-1/2 miles East of Route 7 and Route 20.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20326', 'On Route 44, 1/2 mile East of Route 24, 1 1/2 miles West of I-495 Exit 6.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24016', 'Take Route 20 West Exit off of I-91, 1/2 mile West on Route 20. Hours 24/7.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20220', 'I-84 Exit 3A, 1 mile East on Route 20.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20295', 'On Route 146 Northbound, 3+ miles from I-90 Eixt 10A/Route20.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24017', 'Route 146, Exit 1 onto Route 146A.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20001', 'I-91 N Exit 3 to Route 5 N for 4 miles. I-91 S Exit 13 to Route 5 S 1/2 mile. I-90 Exit 4.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24018', '1/2 mile North of Route 20. Exit 11 off of Mass Pike.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20278', 'I-290 E Exit 11, stay straight onto Southbridge St. I-290 W Exit 11, bear left (U-Turn) under I-290 onto Southbridge St. 3/4 mile on left. (AT Rail Terminal).
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20144', 'Route 146 at Providence Street. 1.5 miles South of I-290, 1.5 miles North of I-90. (At traffic light intersection on 146.)
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22715', 'I-495 Exit 14A onto Route 1 N. 1 mile on left.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22795', 'I-95 Exit 109B.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22751', 'I-95 Exit 41A, to Route 175 E. Right on Pocomoke Ave. to left on Assateague Dr.
+', '7', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23522', 'I-95 Exit 33 to Route 198 East. (Sandy Spring Rd.) Route 198 East to Route 1 North.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20238', 'Southbound Route 301. 20 miles North of VA line.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20216', 'I-95 Exit 75. Right off Exit, on right on Route 4.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22730', 'I-295 Exit 43 East Side of Highway on Route 197.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24020', 'I-95 Exit 5 (Saco) to first Exit after Toll Booth. Left at light. Right at next light onto Route 112. 1 mile on right.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23210', 'I-40/I-85 Exit 138, Highway 61 North.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22621', 'I-91 at Exit 3, South on Route 5.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22749', 'I-81 Exit 150B.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23247', 'I-81 at Exit 321.  East side of Highway at first intersection.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22750', 'I-95 Exit 89.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23213', 'I-95 Exit 164 on Hwy 52 North. 4 miles North of the junction of I-20 & I-95.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23212', 'I-85 Exit 63 on S.R. 290 North/West.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22671', 'I-95 Exit 18, 1/4 mile North on Route 1A.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23706', 'I-295 Exit 4. West side of Highway
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20193', 'Route 6, 5 miles East of I-395 in CT and 2 miles West of Route 146.
+', '2', 'mmueller', '2014-09-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23052', 'I-80 Exit 223A.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23051', 'I-71 Exit 209 onto Route 224 West. 1/4 mile to right on Lake Rd. ', '4', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23055', 'I-80 & I-280, Exit 71 of Ohio Turnpike.
+', '6', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23627', 'I-90, Exit 235
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23054', 'I-70 East Exit 126, right off exit. I-70 West Exit 126, left off exit.
+', '7', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20254', 'I-77 Exit 101.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24021', 'On the North side of Route 101 Exit 2
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20343', 'On Route 13, 1.2 miles North of MA/ NH line. 7 miles South of Milford, NH and the Junction Route 13 and Route 101.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22569', 'I-89 to Exit 16, Exxon on North Side of the highway.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22620', 'On Route 125, 100 yards North of Junction of Route 101 (25 miles Southwest of Portsmouth, NH)
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23049', 'I-95 Exit 3 Northbound; Exit 3B Southbound - One mile south/west on Route 33 (Greenland Road) to left on Ocean Road.', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24022', 'I-293 to Brown Avenue Exit (Route 3A) South towards Airport. 1/2 mile on left.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20229', 'I-95 Exit 5 or 6 to Portsmouth Rotary to Route 1 Bypass North 3/4 mile.', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20175', '1/4 mile East of I-93 Exit 20.', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20207', 'I-80 at Exit 274.', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24023', 'Westbound: I-80 Exit 215. Right off exit onto Route 254 No., 1/4 mile on right. Eastbound: I-80 Exit 215. Left off exit onto Route 254 No., 1/4 mile on right.', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23334', 'On Route 414 at Junction 15 (Site is 30 miles North of Williamsport, PA / I-180).', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22575', 'I-84 Exit 34 (25 Miles from Port Jervis, NY).', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22748', 'I-81 Exit 77.', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22754', 'I-90 Exit 35.', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22753', 'I-80 Exit 78.', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22908', 'I-78, Exit 7 . Directly off the highway, follow signs.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23147', 'From the Northwest, take I-295 or I-195 to Route 206 South to a right on Connector Road to right on Rising Sun.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20215', 'From I-95 N or S - Exit 16W towards Meadowlands/Giants Stadium on Rte 3 East Service Rd, past Sheraton Hotel onto Rte 120 North, stay to the left onto Rte 593 N, Washington Avenue. Giant Valero on left. ', '3', 'MDEVINO', '2013-02-25', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20202', 'NJTP Southbound: After tolls, take Deepwater Exit/Route 40, left at light, left at next light. Northbound: Cross Delaware Memorial Bridge and take Route 40/ Atlantic City Exit (before start of Turnpike). Through intersection on left. From I-295 use Exit 2B, le
+', '2', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22907', 'I-80, Exit 4A and 4C. Follow signs. Directly off the highway.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20064', 'I-80 Exit 4 ont Route 46 East, 1/2 mile on left.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20136', 'On Route 1 North. 2 miles South of I-287 Exit 1. I-95 Exit 10 onto I-287, West to Exit 1: Route 1 South. (3 miles from I-95) Good U-Turn Area on Route 1.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23463', 'I-95 Exit 13, Rt. 439 North towards US-1N/US9N/Elizabeth: Follow Truck Route. Turn slight left onto Bayway Ave/NJ-439.Turn right in circle.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22969', 'I-80 West Exit 53 or 52, follow signs to Rte 46 West, 3 miles on right. I-80 East Exit 47B, Route 46 E, 2-1/2 miles on left. I-280 West Exit 1, right on New Road.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20161', 'Southbound Side between the Holland and Lincoln Tunnels.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20049', 'I-95 Exit 13 to Route 1 & 9 South for 1 mile.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24024', 'On Route 17; I-87 Exit 15; I-287 Exit 66. At NY State Line. Good U-Turn Area.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22686', 'On Route 17; I-87 Exit 15; I-287 Exit 66. At NY Line. Good U-Turn Area.
+', '2', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20102', 'Route 1 & 9 North, 1/4 mile South of Route 3. I-95 Exit 16E. Route 3 East 1 mile to Route 1 & 9 South, 1/4 mile, U-Turn to Site.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22752', 'I-295 Exit 18.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20162', 'I-78 at Exit 3 on Route 22.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20073', 'I-78 at Exit 3 on Route 22.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22691', 'Northbound: I-787 North Exit 2- Follow Signs to Port. Southbound: I-787 North Exit 3B- Follow Signs to Port.
+', '6', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20093', 'I-88 Exit 8. Back River Road and Route 206.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22757', 'I-81 North Exit 2W.  I-81 South Exit 3.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20118', 'I-90 at Exit B-3 NY/MA line (Behind Ambest Citgo).
+', '7', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22337', 'I-90 at Exit B-3 NY/MA line. I-90 at Exit B-3.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22941', 'I-87 Exit 42 East Side of I-87 across from McDonald''s.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22718', 'I-81 Exit 10.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20192', 'I-87 at Exit 21B (formerly Fox Run Parc-Citgo)
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23489', 'I-390 Exit 5
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20160', 'I-495 Exit 64 to Route 112 North. 1/2 mile to light, turn left on Horseblock. 1/2 mile on right. (Note: Can use Exit 63 as well).
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22338', 'I-90 Exit 28, immediately on the right after the Toll Booths.
+', '5', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22940', 'I-90 Exit 28. Left at light, first Truck stop on left.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23935', 'Exit 28 off NYS Thruway Left on Riverside Drive 1/8 mile on left
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22942', '2 mile South of NY Thruway Exit 23 on Route 9 West.
+', '2', 'mmueller', '2013-04-30', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23148', 'I-86 Exit 37 Just South of the Junction of I-86 and I-390.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22888', 'I-87 Exit 32; Northbound take right off exit, Southbound take left.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20247', 'I-495 W Exit 16, bear right onto Hunter Point Ave, 1/4 mile on left. I-495 E, Midtown Tunnel, look for I-495 and the Borden Ave./Pulaski Bridge Exit. Left onto Borden Ave. then 1 mile to left onto Greenpoint Ave. On left.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23243', 'Rte 17 at Exit 119 (Rte 302 South/West).   West side of Rte 17.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22516', 'I-84 Exit 5, South side of the highway.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23185', 'Route 17 / I-86 at Exit 63 (Lounsberry Exit) on NY Rte 509 South.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22759', 'I-90 Exit 48A.
+', '4', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22281', 'Junction of Route 14 and 318. I-90 Exit 42 Straight through intersection and turn right into location.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24025', 'At end of I-495 East, take Route 25 East, 2 miles on left.
+', '1', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22758', 'I-90 Exit 41.
+', '6', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('22343', 'I-90 Exit 40, at junction of Route''s 31 and 34.
+', '2', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20129', 'I-87 Exit 17 Route 9 North, 1/4 mile on right.
+', '3', 'mmueller', '2012-11-13', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24054', 'I-495 Eastbound Exit 52.  Left at bottom of ramp.
+I-495 Westbound Exit 53 onto Service Road that parallels 495.  On right
+', '1', 'mmueller', '2012-12-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24089', 'I-91 Exit 40 (Bradleyy Airport Connector) 2.5 miles to 2nd exit, Rt. 75 (Ella Grasso Tpke). Turn right, site is 1/4 mile on the right.', '1', 'MDEVINO', '2013-01-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24111', 'I-91 N.  Exit 24 (US 5 / MA 1) Turn Left on State Road.
+I-91 S.  Exit 24 (US 5 / MA 1) Turn Right on State Road.', '2', 'mmueller', '2013-02-27', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24112', 'I-91 N. Exit 5 (Broad St) Left onto Broad St.  Left onto West Columbus.
+I-91 S. Exit 6 (Union St) Take W Columbus Ave past Basketball Hall of Fame.', '2', 'mmueller', '2013-03-18', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24306', 'I-90 Exit 41.Junction of Route 414 and 318. 1/4 mile from Petro Truck Stop.', '4', 'mmueller', '2013-09-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24135', 'I-87 Exit 23 onto Route 9W.  One mile on left.', '4', 'mmueller', '2013-09-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24369', 'I-495 Exit 23B.  4 miles West on Route 9, on right.', '3', 'mmueller', '2013-09-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24420', 'I-690 East Exit 8, left onto Hiawatha Blvd West, left on State Fair Blvd. 
+I-690 West Exit 10, right on North Geddes,  left on Spencer, straight to State Fair Blvd. ', '1', 'mmueller', '2013-11-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24421', 'I-81 Exit 7: Highway 11.  West side of highway.  	
+', '1', 'mmueller', '2013-11-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24415', 'I-88 Exit 12.  South side of highway. Right onto County Route 48.  On right.', '1', 'mmueller', '2013-11-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24417', 'I-84 Exit 20 onto Route 8 North.  2.5 miles to Exit 36.  On right in back.  ', '2', 'mmueller', '2013-11-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24434', 'Travel I-95 South over the George Washington Bridge.   Take Exit 72B to Route 46 West.  Station is 4 miles west on right.  Comes up very quickly!', '2', 'mmueller', '2013-12-04', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24439', 'From I-80 East or West take Exit 120 for PA-879 West. Continue 0.3 miles. Sapp Brothers will be on the right.   ', '1', 'mmueller', '2013-12-10', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24440', 'I-81 Exit 48.   Half mile East at the junction of Route 342 and Route 37.', '1', 'mmueller', '2013-12-11', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24441', 'I-95 Northbound just after Exit 12.', '3', 'mmueller', '2014-02-20', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24442', 'I-95 Southbound approximately one mile after Exit 10.', '3', 'mmueller', '2014-02-20', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24449', 'I-95 Northbound approximately one mile after Exit 40.', '2', 'mmueller', '2014-02-20', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24450', 'I-95 Southbound approximately one mile after Exit 41.', '2', 'mmueller', '2014-02-20', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24443', 'From I-81 / I-64 take Exit 205 for VA-606 East. Fuel City will be on the left.   ', '3', 'mmueller', '2014-01-08', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24454', 'I-93 Exit 17 for US-4 to US-3/NH-132/Penacook/Boscawen.  Turn right onto Hoit Road (US-4 ).  Station is one half mile on the left.
+', '2', 'mmueller', '2013-12-20', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('20237', 'PRICING', '7', 'CHERYL', '2014-01-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24481', 'I-90 E: Exit 52E onto Walden Avenue.  7 miles East to the site on the right.  
+
+I-90 W: Exit 48A onto Rte 77 South.  Travel 3 miles to Rte 33 West.  Travel 6 miles onto Walden Avenue.  Travel 5 more miles to site on the left.  ', '2', 'mmueller', '2014-02-11', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24499', 'I-90: Exit 46 and left onto Route 253 West (Lehigh State Road).  Travel half mile and turn left onto Route 15/Route 253 South (West Henrietta Road).  
+
+I-390: Exit 12 onto Route 253 West (Lehigh State Road).  Travel half mile and turn left onto Route 15/Route 253 South (West Henrietta Road).  
+
+
+', '2', 'mmueller', '2014-04-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24507', 'I-278 E: Exit 48 onto Bruckner Blvd.  Right onto Tiffany St. Right onto Garrison Ave.
+I-278 W: Exit 51onto Bruckner Blvd.  Left onto Tiffany Street. Right onto Garrison Avenue.', '2', 'mmueller', '2014-03-18', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24509', 'I-278 E: Exit 48 onto Bruckner Blvd.  Right onto Hunt''s Point Avenue.  Right onto Randall Avenue.  Left onto Faile Street.  Left onto Oak Point Avenue.
+
+I-278 W: Exit 51onto Bruckner Blvd.  Right onto Tiffany Street.  Left onto Oak Point Avenue.
+', '1', 'mmueller', '2014-02-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24532', 'I-495: Exit 12 to Route 140 N. Right on Route 106 E.
+I-95: Exit 7A to Route 140 S. Left on Route 106 E.
+', '2', 'mmueller', '2014-03-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24527', 'I-81: Exit 13 onto State Highway 281 North.  Site on left.', '2', 'mmueller', '2014-04-10', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24534', 'I-81: Exit 32 to Route 49 East for 1/4 mile.  Site is on the left.', '1', 'mmueller', '2015-07-02', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24528', 'I-88: Exit 6 onto Route 79 South.  Site on the left.', '2', 'mmueller', '2014-04-10', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24419', 'I-90: Exit 3 onto Route 202 South.  Approximately 10 miles.', '1', 'mmueller', '2014-03-18', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24548', 'I-81 SB: Exit 155.  Right onto Blue Ridge Trail.  Travel 1/4 mile.
+I-81 NB: Exit 155.  Left onto Blue Ridge Trail.  Travel 1/4 mile.', '1', 'mmueller', '2014-03-26', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24549', 'I-81: Exit 77 to Route 39 West.  On right just beyond T/A.', '1', 'mmueller', '2014-04-04', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24562', 'I-78: Exit 49 onto Rte 100 North.  Right onto Tilghman St.  Left onto Blue Barn Rd.  
+I-476: Exit 56 onto Rte 22 West.  Right onto Blue Barn Rd.', '3', 'mmueller', '2014-04-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24619', 'Northbound side of Routes 1 & 9 / Tonnelle Ave.   ¼ mile North of the junction of Route 139 that leads to Holland Tunnel.  ', '2', 'mmueller', '2014-07-10', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24711', 'card 303', '1', 'CHERYL', '2014-08-28', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24722', 'I-84 Exit 8.', '2', 'mmueller', '2014-09-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24723', 'I-84 Exit 8', '2', 'mmueller', '2014-09-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24738', 'I-78 Exit 58 A/B to North 1-9.  Approx 1/4 mile to Delancey St Exit.  Left onto Delancey St then right onto Stockton St.', '3', 'mmueller', '2014-09-24', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24751', 'From I-86 take Exit 75.  From I-81 take Exit 2.
+Travel US 11 North approximately 1/2 mile.  Site is on the right.', '3', 'mmueller', '2014-10-01', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24750', 'I-88 Exit 15.  Route 23 South approx 200 yards.  Site is on the right next to McDonalds.', '3', 'mmueller', '2014-10-06', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('24784', 'Port Newark at corner of Corbin Street and Tyler Street.', '3', 'mmueller', '2014-11-07', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25097', 'I-87 Exit 14 to Route 59 North.  Approx 2/3 mile.  Station is on the right.', '1', 'mmueller', '2015-07-22', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25098', 'I-84 Exit 6 to Route 17K South.  Approx 1/8 mile.  Station is on the left.', '2', 'mmueller', '2015-07-22', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25114', 'I-87 Exit 14 to Route 59 North.  Approx 2/3 mile.  Station is on the right.', '3', 'DAWNV', '2015-08-19', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25179', 'I-287 Exit 66 to Route 17 South.  Approx 1/10 mile.  Station is on the right.', '2', 'mmueller', '2015-11-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25180', 'I-95 Exit 13 to Routes 1 & 9 South.  Approx 1 1/4 miles.  Station is on the right.', '2', 'mmueller', '2015-11-06', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25182', 'I-80 Exit 4B to Route 46 East.  Approx 2 1/2 miles.  Station is on the right.', '3', 'mmueller', '2015-11-06', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25181', 'I-87 Exit 10.  East on Ushers Road approximately 200 yards.  Station is on the left.', '2', 'mmueller', '2015-11-12', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25193', 'I-81 Exit 34.  Travel State Road 104 East approximately 1/4 mile.  Site is on the left.', '3', 'mmueller', '2015-12-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25210', 'I-90 Exit 8.  Route 32 South to Route 20 East.  Route 20 East to Route 67 North.  Continue on Route 67 North for 8 miles.', '3', 'mmueller', '2016-01-18', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25236', 'I-295 Exit 2C.  Route 140 West.  Station on right across from Flying J.
+', '4', 'mmueller', '2016-02-15', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25317', 'I-95 Exit 15E onto US1&9 Truck North towards Jersey City.  Take Hackensack Avenue Exit.  North/West side of US Truck 1&9.  West side of Hackensack River bridge.', '2', 'mmueller', '2016-06-30', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25380', 'I-87 Exit 17 Route 9 North, 1 1/2 miles.  Station is on the left.', '1', 'mmueller', '2016-10-05', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25438', 'I-95 Exit 7.  Merge onto US-206 South/US Highway 206. Travel ¼ mile.  Station is on the right.
+
+I-295 Exit 56.  Right on Rising Star.  Left at light onto Connector Road.  Left at light onto US 206 North.   Travel ½ mile to U-Turn at light onto US 206 South.  Travel ½ mile.  Station is on the right.   
+  ', '4', 'mmueller', '2017-02-23', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25442', 'I-90 Exit 3.  Travel 2 miles on MA 10 / US 202 South to Westfield.  East on Main Street (MA 20) to East Main Street approximately one mile.  Station is on the left.', '3', 'mmueller', '2017-02-21', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25443', 'JFK Expressway to 148th Street Exit and bear right. Site is 100 yards on left.  ', '3', 'mmueller', '2017-02-21', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25511', 'I-90 Exit 41.  Travel one half mile south on NY 414.  Station is on the right.', '2', 'mmueller', '2017-05-03', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25512', 'I-90 Exit 32.  Travel south 2 1/2 miles south on NY 233.  Travel east one mile on NY 5.  Station is on the left.', '2', 'mmueller', '2017-05-03', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25513', 'I-90 Exit 43.  Travel south 100 yards on NY 21.  Travel east 7 miles on Route 96.  Station is on the right.
+
+I-90 Exit 42.  Travel south 1/4 mile on NY 14.  Travel west  6 miles on Route 96.  Station is on the left.', '2', 'mmueller', '2017-05-09', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25514', 'I-81 NorthBound Exit 36.  Station is on the right at end of the ramp.
+
+No easy access via I-81 SouthBound.', '3', 'mmueller', '2017-05-03', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25496', 'NJTP Exit 5.  Travel north for 1/4 mile on Route 541.  Station is on the right.
+I-295 Exit 47.  Travel south for 2 1/4 miles on Route 541 to U-Turn.  Return north on Route 541 for 1 mile.  Station is on the right.', '3', 'mmueller', '2017-06-01', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25510', 'I-95 Exit 8A to Route 32 West.  Travel 3/4 mile to US 130 North.  Continue of US 130 North for 4 1/4 miles. Station is on the right.', '3', 'mmueller', '2017-06-01', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25522', 'I-295 Exit 67.  Travel north on Route 1 for 11 miles.  Station is on the right.', '2', 'mmueller', '2017-06-01', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25665', 'I-81 Exit 48 onto New York Route 342 East.  Travel one half mile.  Station is on the right.', '5', 'mmueller', '2017-09-25', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25666', 'I-390 Exit 9 onto New York Route 15 South.  Travel one hunderd yards.  Station is on the left.', '4', 'mmueller', '2017-09-25', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25679', 'Route 8 South: Exit 3 to Main St North.  Travel half mile.  Turn right onto North Ave.  Station is on right.    
+Route 8 North: Exit 4.  Turn right onto Lindley St.  Take first right onto North Ave. Travel half mile.  Station is on left.     
+
+', '2', 'mmueller', '2017-09-27', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25701', 'Just off of Route 2. Exit 16 on Route 202 South.', '1', 'mmueller', '2017-10-17', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25040', '301 move to $.06 hold', '14', 'DAWNV', '2017-12-04', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25847', 'New per Terry', '1', 'DAWNV', '2018-03-15', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('25890', 'On Route 149.  5 miles east of I-87 Exit 20.  7 miles west of Route 4 in Fort Ann.  ', '2', 'mmueller', '2018-05-08', 'DIR', '', null, 'f');
+INSERT INTO "notes" VALUES ('23210', 'i40 i85', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20173', 'i84', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20258', 'i84', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22668', 'i84', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20263', 'i84', '8', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20234', 'i84', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20306', 'i84 i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20039', 'i84', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22756', 'i84', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20220', 'i84 i90', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20217', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20208', 'i91', '8', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20271', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20196', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22593', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20145', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24089', 'i91', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24016', 'i91', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20001', 'i91', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20114', 'i90', '7', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22621', 'i91', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22569', 'i89', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23053', 'i90 i94', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23055', 'i80', '8', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20214', 'i95', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20008', 'i95', '12', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20035', 'i95', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22599', 'i84', '4', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22601', 'i84', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23339', 'i84', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20285', 'i395', '4', 'mmueller', '2018-06-11', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22575', 'i84', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24008', 'i395', '3', 'mmueller', '2018-06-07', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22671', 'i95', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20082', 'i90', '3', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22677', 'i84', '4', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24018', 'i90', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20073', 'i78', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20102', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22686', 'i87', '4', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24024', 'i87', '3', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20207', 'i80', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20118', 'i90', '9', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23522', 'i95', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20336', 'i190', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20064', 'i80', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20065', 'i93', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20049', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20229', 'i95', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20101', 'i95', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24020', 'i95', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20162', 'i78', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20139', 'i90', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20160', '', '5', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24025', '', '4', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24013', 'i95', '3', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24010', 'i95, i395', '3', 'mmueller', '2018-06-12', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20129', 'i87', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20136', 'i95', '6', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22715', 'i95', '6', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22718', 'i81', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22343', 'i90', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20093', 'i88', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24014', 'i90', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20144', 'i90', '5', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20215', 'i95', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20175', 'i93', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24022', 'i93', '3', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20254', 'i77', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20192', 'i87', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23354', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20202', 'i95', '4', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20233', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20278', 'i90', '4', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20216', 'i95', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20247', '', '5', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24023', 'i80', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22940', 'i90', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24009', 'i395', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22733', 'i95', '3', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20295', 'i90', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20326', 'i495', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22941', 'i87', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23505', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22283', 'i95', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22337', 'i90', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22338', 'i90', '8', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22516', 'i84', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22691', 'i87 i90', '8', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22730', 'i95', '5', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22748', 'i81', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22749', 'i81', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22750', 'i95', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22751', 'i95', '9', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22795', 'i95', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22752', '', '6', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22753', 'i80', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22754', 'i90', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22759', 'i90', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22758', 'i90', '8', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22757', 'i81', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22888', 'i87', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22908', 'i78', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22907', 'i80', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23463', 'i95', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22969', 'i80', '5', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23051', 'i71', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23049', 'i95', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23050', 'i85', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23052', 'i80', '7', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23054', 'i70', '9', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23147', '', '6', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23185', 'i86', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23212', 'i85', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23213', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23247', 'i81', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23489', '', '6', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23627', 'i90', '5', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23706', 'i95', '4', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24054', 'i495', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22281', 'i90', '4', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('23148', 'i86', '3', 'MDEVINO', '2013-04-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22501', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22500', 'i95', '6', 'MDEVINO', '2013-01-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('22942', 'i87', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24111', 'i91', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24112', 'i91', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24135', 'i87', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24369', 'i90', '4', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24306', 'i90', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24419', 'i90', '3', 'mmueller', '2014-04-03', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24420', 'i90', '3', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24421', 'i81', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24415', 'i88', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24434', 'i95', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24417', 'i84', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24439', 'i80', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24440', 'i81', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24441', 'i95', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24442', 'i95', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24449', 'i95', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24450', 'i95', '3', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24454', 'i93', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24443', 'i81', '4', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24507', 'i278', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24509', 'i278', '5', 'mmueller', '2014-04-02', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24532', 'i95', '3', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24549', 'i81', '3', 'mmueller', '2014-04-04', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24481', 'i90', '3', 'mmueller', '2014-04-04', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24548', 'i81', '3', 'mmueller', '2014-04-07', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24499', 'i90', '4', 'mmueller', '2014-04-08', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24527', 'i81', '4', 'mmueller', '2014-04-08', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24534', 'i81', '3', 'mmueller', '2014-04-08', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24528', 'i88', '4', 'mmueller', '2014-04-08', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24562', 'i78', '2', 'mmueller', '2014-04-09', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24723', 'i84', '3', 'mmueller', '2014-09-05', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24619', 'i95 i78', '4', 'mmueller', '2014-09-05', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24738', 'i95 i78', '1', 'mmueller', '2014-09-22', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24750', 'i88', '2', 'mmueller', '2014-10-07', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24751', 'i81 i86', '2', 'mmueller', '2014-10-01', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('24784', 'i78 i95', '1', 'mmueller', '2014-11-07', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25098', 'i84', '4', 'mmueller', '2015-07-31', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25097', 'i87 i287', '3', 'DAWNV', '2015-08-19', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20161', 'i95', '9', 'mmueller', '2015-07-31', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25114', 'i87', '4', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25179', 'i87', '1', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25180', 'i95', '1', 'mmueller', '2015-11-18', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25182', 'i80', '1', 'mmueller', '2015-11-17', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25181', 'i87', '1', 'mmueller', '2015-11-12', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25193', 'i81', '2', 'mmueller', '2015-12-09', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25210', 'i90', '1', 'mmueller', '2016-01-12', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25236', 'i295', '2', 'mmueller', '2016-02-15', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25317', 'i95', '1', 'mmueller', '2016-06-24', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25380', 'i87', '3', 'mmueller', '2016-10-05', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25438', 'i95 i295', '2', 'mmueller', '2017-02-16', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25442', 'i90', '1', 'mmueller', '2017-02-17', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25443', 'i678', '1', 'mmueller', '2017-02-21', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25511', 'i90', '3', 'mmueller', '2017-05-03', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25514', 'i81', '2', 'mmueller', '2017-05-03', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25496', 'i295', '4', 'mmueller', '2017-06-01', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25665', 'i81', '4', 'mmueller', '2017-09-15', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('25666', 'i390', '3', 'mmueller', '2017-09-15', 'HWY', '', null, 'f');
+INSERT INTO "notes" VALUES ('20208', 'tractor 24 atm', '6', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20214', 'tractor cstore atm', '4', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20008', 'tractor 24 cstore parking atm shower scale food service', '11', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20196', 'straight
+', '3', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22593', 'straight 24 cstore atm
+', '2', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20173', 'straight 24 cstore atm
+', '2', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20035', 'straight service', '3', 'mmueller', '2013-09-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20234', 'straight 24 cstore atm
+', '2', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20039', 'straight cstore atm
+', '3', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22599', 'straight 24 cstore atm
+', '3', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20271', 'straight 24 cstore atm
+', '3', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22600', 'straight 24 cstore atm
+', '3', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22601', 'straight cstore
+', '2', 'MDEVINO', '2012-11-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23719', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23721', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23723', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23724', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23725', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23726', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23727', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23728', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23729', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23730', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22344', 'straight cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22756', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24008', 'tractor 24 cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20101', 'straight 24 cstore atm
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23354', 'tractor 24 cstore atm
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20258', 'straight cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24009', 'tractor 24 cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22762', 'straight cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20095', 'straight 24 cstore atm
+', '6', 'DAWNV', '2013-09-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23132', 'straight 24 cstore
+', '3', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24010', 'tractor 24 cstore
+', '2', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23339', 'straight cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22733', 'straight 24 cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24011', 'straight cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20296', 'straight 24 cstore atm deli
+', '4', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20211', 'tractor 24 cstore atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22668', 'straight cstore atm 24
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20263', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '7', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20268', 'tractor
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24012', 'straight 24 cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22283', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23505', 'straight 24
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20145', 'straight cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20217', 'straight cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20306', 'straight cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20077', 'straight cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20067', '24 straight cstore atm deli
+', '4', 'mmueller', '2017-02-21', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20285', 'straight 24 cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23050', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23053', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20082', 'straight
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20114', 'tractor 24 cstore parking atm shower scale food nogas def
+', '6', 'mmueller', '2016-02-15', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24013', 'straight cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22316', 'straight atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20139', 'tractor cstore atm
+', '3', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20336', 'tractor 24 cstore atm deli shower scale parking
+', '2', 'mmueller', '2014-09-04', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22501', 'tractor 24 cstore parking atm food
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20065', 'tractor cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24014', 'tractor 24 cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22500', 'tractor 24 cstore parking atm food
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22677', 'tractor cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20128', 'tractor 24 cstore atm
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20233', 'tractor
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24015', 'tractor 24 cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20326', 'tractor cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24016', 'tractor 24 cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20220', 'tractor 24 cstore parking atm shower scale food service
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20295', 'tractor 24 cstore atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24017', 'straight cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24018', 'straight 24 cstore
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20278', 'straight cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20144', 'straight 24 cstore atm deli
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22715', 'tractor cstore parking atm deli
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22795', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '3', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22751', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '8', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23522', 'straight 24 cstore atm
+', '2', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20238', 'tractor 24 cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20216', 'tractor cstore parking atm deli food
+', '6', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22730', 'tractor cstore parking atm deli food
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24020', 'straight cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23210', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22621', 'tractor 24
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22749', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23247', '24 tractor cstore parking atm deli diner nogas
+', '3', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22750', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '6', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23213', 'tractor ta 24 cstore parking atm deli shower scale food service nogas', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23212', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '3', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22671', 'tractor cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23706', 'tractor 24 cstore atm
+', '3', 'MDEVINO', '2013-01-16', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20193', 'tractor 24 cstore
+', '3', 'mmueller', '2013-01-22', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23052', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '6', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23051', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23055', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '7', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23627', 'tractor ta  24 cstore parking atm deli shower scale nogas
+', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23054', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '8', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20254', 'tractor 24 parking atm shower scale food
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24021', 'tractor cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20343', 'tractor cstore atm deli
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22569', 'tractor 24 cstore atm deli shower
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22620', 'tractor 24 cstore parking atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23049', 'tractor ta 24 cstore parking atm deli shower scale food service nogas', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24022', 'tractor 24 cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20229', 'tractor cstore atm', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20175', 'tractor 24 cstore atm deli', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20207', 'tractor 24 cstore', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24023', 'tractor atm shower scale food service', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23334', 'tractor 24 cstore atm', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22575', 'tractor 24 cstore atm deli', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22748', 'tractor ta 24 cstore parking atm deli shower scale food service nogas', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22754', 'tractor ta 24 cstore parking atm deli shower scale food service nogas', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22753', 'tractor ta 24 cstore parking atm deli shower scale food service nogas', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22908', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '4', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23147', 'tractor 24 cstore parking atm deli shower scale food service
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20215', 'tractor 24
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20202', 'tractor 24 cstore parking atm shower food service
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22907', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '3', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20064', 'tractor 24 cstore
+', '6', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20136', 'tractor 24 cstore parking scale
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23463', 'tractor 24 cstore atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22969', 'tractor
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20161', 'tractor 24 cstore atm deli scale
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20049', 'tractor 24
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24024', 'tractor 24 cstore atm deli
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22686', 'tractor 24 cstore atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20102', 'tractor 24 atm
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22752', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20162', 'tractor 24 cstore parking atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20073', 'tractor 24 cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22691', 'tractor 24 cstore parking atm deli shower food service
+', '7', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20093', 'tractor 24 cstore parking atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22757', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '6', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20118', 'tractor shower service
+', '8', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22337', 'tractor 24 cstore atm shower scale food
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22941', 'tractor 24 cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22718', 'tractor 24 parking atm deli food
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20192', 'tractor 24 cstore parking atm scale food
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23489', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20160', 'tractor 24 cstore atm
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22338', 'tractor 24 cstore atm shower scale food
+', '6', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22940', 'tractor 24 cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23935', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '2', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22942', 'tractor cstore
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23148', 'tractor 24 cstore parking atm scale
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22888', 'tractor parking food
+', '3', 'mmueller', '2013-09-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20247', 'straight 24
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23243', 'tractor cstore atm deli
+', '3', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22516', 'tractor ta 24 cstore parking atm deli shower scale food service nogas
+', '5', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('23185', 'tractor 24 cstore parking atm deli
+', '4', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22759', 'tractor ta 24 cstore parking atm deli shower scale food service
+', '5', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22281', 'tractor 24 cstore parking atm deli
+', '3', 'mmueller', '2013-01-22', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24025', 'straight 24 cstore atm
+', '2', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22758', 'tractor 24 cstore parking atm deli shower scale food service nogas
+', '7', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('22343', 'tractor 24 cstore parking atm deli
+', '3', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20129', 'tractor 24 cstore parking atm shower
+', '4', 'mmueller', '2012-11-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24054', 'tractor 24 cstore atm parking', '2', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24089', 'straight 24 cstore', '2', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24111', '24 tractor cstore parking atm shower diner', '1', 'mmueller', '2013-11-08', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24112', '24 tractor nogas cstore parking shower 
+', '1', 'mmueller', '2013-02-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24135', 'tractor 24 cstore atm
+', '3', 'mmueller', '2013-09-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24369', 'tractor 24 cstore parking atm food deli
+', '2', 'mmueller', '2013-09-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24306', 'tractor 24 cstore parking atm deli nogas', '3', 'mmueller', '2013-09-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('20001', 'tractor', '7', 'mmueller', '2013-09-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24417', 'tractor cstore parking atm deli nogas', '3', 'mmueller', '2013-11-08', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24420', 'tractor 24 cstore atm shower food', '2', 'mmueller', '2013-11-08', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24421', 'tractor 24 cstore atm deli food', '2', 'mmueller', '2013-11-08', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24415', 'tractor 24 cstore atm shower food', '2', 'mmueller', '2013-11-08', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24434', 'tractor 24', '1', 'mmueller', '2013-12-04', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24439', 'tractor 24 parking atm deli shower scale food service', '2', 'mmueller', '2013-12-10', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24440', 'tractor 24 cstore parking shower scale food ', '2', 'mmueller', '2013-12-11', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24441', 'tractor 24 cstore parking atm food service', '2', 'mmueller', '2013-12-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24442', 'tractor 24 cstore parking atm food service', '2', 'mmueller', '2013-12-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24449', 'tractor 24 cstore parking atm food service', '1', 'mmueller', '2013-12-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24450', 'tractor 24 cstore parking atm food service', '1', 'mmueller', '2013-12-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24443', 'tractor 24 cstore parking atm shower food nogas', '2', 'mmueller', '2013-12-18', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24454', 'tractor 24 cstore atm deli ', '3', 'mmueller', '2013-12-20', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24481', 'tractor 24 cstore parking atm deli', '1', 'mmueller', '2014-01-27', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24499', 'tractor 24 cstore parking atm shower scale food', '3', 'mmueller', '2014-02-21', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24507', 'straight 24 cstore', '1', 'mmueller', '2014-02-24', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24509', 'tractor', '2', 'mmueller', '2014-02-24', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24532', 'straight 24 cstore atm', '1', 'mmueller', '2014-03-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24527', 'tractor 24 cstore parking food ', '3', 'mmueller', '2014-03-14', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24534', 'tractor 24 cstore parking', '2', 'mmueller', '2014-03-14', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24528', 'tractor cstore parking food', '3', 'mmueller', '2014-03-14', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24419', 'straight 24 cstore ', '2', 'mmueller', '2014-03-18', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24549', 'tractor cstore atm deli service def', '2', 'mmueller', '2016-02-16', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24548', 'tractor cstore parking atm shower food service', '2', 'mmueller', '2014-03-27', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24562', 'tractor 24 cstore parking atm deli shower scale food', '4', 'mmueller', '2014-04-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24619', 'cstore atm', '3', 'mmueller', '2014-07-10', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24722', 'tractor ', '1', 'mmueller', '2014-09-05', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24723', 'tractor 24 cstore', '1', 'MDEVINO', '2017-02-13', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24738', 'tractor 24 cstore atm', '2', 'mmueller', '2014-09-22', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24750', 'tractor 24 cstore food', '1', 'mmueller', '2014-10-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24751', 'tractor 24 cstore', '1', 'mmueller', '2014-10-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('24784', 'tractor 24', '2', 'mmueller', '2014-11-07', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25098', 'straight 24 cstore atm ', '1', 'mmueller', '2015-07-22', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25097', 'straight cstore atm service', '2', 'mmueller', '2015-07-22', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25114', 'straight cstore atm service', '2', 'DAWNV', '2015-08-19', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25179', 'tractor 24 cstore parking atm deli food', '3', 'mmueller', '2015-11-05', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25180', 'tractor 24 cstore atm deli food nogas', '3', 'mmueller', '2015-11-06', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25182', 'tractor 24 nogas', '2', 'mmueller', '2015-11-06', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25181', 'tractor 24 cstore atm ', '3', 'mmueller', '2015-11-12', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25193', 'tractor 24 cstore parking atm deli shower scale food ', '1', 'mmueller', '2015-12-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25210', 'straight 24 cstore atm food def', '2', 'mmueller', '2016-03-02', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25236', 'tractor 24 cstore parking atm', '3', 'mmueller', '2016-02-15', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25317', 'tractor 24 cstore atm scale def', '3', 'mmueller', '2016-06-29', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25380', 'tractor 24 cstore parking atm deli scale food', '2', 'mmueller', '2016-10-05', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25438', '24 HOURS tractor cstore atm ', '3', 'CHERYL', '2017-02-15', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25442', 'straight 24 cstore atm deli food ', '2', 'mmueller', '2017-02-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25443', 'tractor 24 cstore parking atm food', '2', 'mmueller', '2017-02-21', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25511', 'tractor 24 cstore parking atm deli food def', '1', 'mmueller', '2017-05-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25512', 'tractor 24 cstore atm food ', '1', 'mmueller', '2017-05-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25513', 'tractor 24 cstore atm food', '1', 'mmueller', '2017-05-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25514', 'tractor 24 cstore atm food ', '1', 'mmueller', '2017-05-03', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25496', 'tractor cstore parking ', '2', 'mmueller', '2017-05-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25510', 'tractor', '2', 'mmueller', '2017-05-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25522', 'tractor cstore food ', '1', 'mmueller', '2017-05-09', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25665', 'tractor cstore parking atm shower food ', '3', 'mmueller', '2017-09-15', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25666', 'tractor 24 cstore parking atm shower scale food service def', '2', 'mmueller', '2017-09-25', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25679', '24 cstore atm', '1', 'mmueller', '2017-09-27', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25701', 'tractor 24 cstore atm', '2', 'mmueller', '2017-10-17', 'SVC', '', null, 'f');
+INSERT INTO "notes" VALUES ('25890', 'tractor cstore parking atm shower food def', '3', 'mmueller', '2018-05-08', 'SVC', '', null, 'f');
+COMMIT;
+
