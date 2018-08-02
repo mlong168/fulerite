@@ -1,7 +1,0 @@
-export function {{StudlyName}}Filter(){
-    'ngInject';
-
-    return function( input ){
-        //
-    }
-}
