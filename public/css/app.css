@@ -20,113 +20,9 @@ md-toast[md-theme=warn] .md-toast-content {
 .u-center {
   text-align: center; }
 
-
-
-
-
-
-
-.ForgotPassword-input {
-  margin-bottom: 0; }
-
-
-.btn-github:hover {
-  color: #fff; }
-
-.btn-facebook:hover {
-  color: #fff; }
-
-.btn-google:hover {
-  color: #fff; }
-
-
-
-.RegisterForm-inputContainer {
-  margin-top: 10px;
-  margin-bottom: 0px;
-  width: 80%;
-  min-width: 300px; }
-
-.RegisterForm-submit {
-  margin-bottom: 40px;
-  margin-left: 0;
-  width: 100%;
-  padding: 5px 0; }
-
-.ResetPassword-input {
-  margin-bottom: 0; }
-
-
-
-
-.color-palette {
-  height: 35px;
-  line-height: 35px;
-  text-align: center; }
-
-.color-palette-set {
-  margin-bottom: 15px; }
-
-.color-palette span {
-  display: none;
-  font-size: 12px; }
-
-.color-palette:hover span {
-  display: block; }
-
-.color-palette-box h4 {
-  position: absolute;
-  top: 100%;
-  left: 25px;
-  margin-top: -40px;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
-  display: block;
-  z-index: 7; }
-
-.bs-glyphicons {
-  padding-left: 0;
-  padding-bottom: 1px;
-  margin-bottom: 20px;
-  list-style: none;
-  overflow: hidden; }
-  .bs-glyphicons li {
-    float: left;
-    width: 25%;
-    height: 115px;
-    padding: 10px;
-    margin: 0 -1px -1px 0;
-    font-size: 12px;
-    line-height: 1.4;
-    text-align: center;
-    border: 1px solid #ddd; }
-  .bs-glyphicons .glyphicon {
-    margin-top: 5px;
-    margin-bottom: 10px;
-    font-size: 24px; }
-  .bs-glyphicons .glyphicon-class {
-    display: block;
-    text-align: center;
-    word-wrap: break-word;
-    /* Help out IE10+ with class names */ }
-  .bs-glyphicons li:hover {
-    background-color: rgba(86, 61, 124, 0.1); }
-
-@media (min-width: 768px) {
-  .bs-glyphicons li {
-    width: 12.5%; } }
-
-
-
-
-
-
-
-
-
-
-
-
+.ForgotPassword-formContainer {
+  margin-top: 80px;
+  margin-bottom: 80px; }
 
 
 .Footer {
@@ -155,10 +51,21 @@ md-toast[md-theme=warn] .md-toast-content {
   width: 49px;
   height: 46px; }
 
-.ForgotPassword-formContainer {
+.dataTables_filter {
+  float: right; }
+
+.dataTables_filter input {
+  margin: 0px 5px 0px 5px; }
+
+.dataTables_paginate {
+  float: right; }
+
+.dataTables_paginate .pagination {
+  margin: 0px; }
+
+.Login-formContainer {
   margin-top: 80px;
   margin-bottom: 80px; }
-
 
 .Landing {
   height: 100%; }
@@ -334,33 +241,126 @@ Make sure to remove this when you modify this demo
     -ms-flex: none !important;
     flex: none !important; } }
 
-.dataTables_filter {
-  float: right; }
-
-.dataTables_filter input {
-  margin: 0px 5px 0px 5px; }
-
-.dataTables_paginate {
-  float: right; }
-
-.dataTables_paginate .pagination {
-  margin: 0px; }
-
-.Login-formContainer {
-  margin-top: 80px;
-  margin-bottom: 80px; }
-
 
 .Register-formContainer {
   margin-top: 80px;
   margin-bottom: 80px; }
 
-.ResetPassword-formContainer {
-  margin-top: 80px;
-  margin-bottom: 80px; }
 
 .Login-formContainer {
   margin-top: 80px;
   margin-bottom: 80px; }
+
+
+
+.ResetPassword-formContainer {
+  margin-top: 80px;
+  margin-bottom: 80px; }
+
+
+
+
+.ForgotPassword-input {
+  margin-bottom: 0; }
+
+
+.btn-github:hover {
+  color: #fff; }
+
+.btn-facebook:hover {
+  color: #fff; }
+
+.btn-google:hover {
+  color: #fff; }
+
+
+
+.RegisterForm-inputContainer {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  width: 80%;
+  min-width: 300px; }
+
+.RegisterForm-submit {
+  margin-bottom: 40px;
+  margin-left: 0;
+  width: 100%;
+  padding: 5px 0; }
+
+.ResetPassword-input {
+  margin-bottom: 0; }
+
+
+
+.color-palette {
+  height: 35px;
+  line-height: 35px;
+  text-align: center; }
+
+.color-palette-set {
+  margin-bottom: 15px; }
+
+.color-palette span {
+  display: none;
+  font-size: 12px; }
+
+.color-palette:hover span {
+  display: block; }
+
+.color-palette-box h4 {
+  position: absolute;
+  top: 100%;
+  left: 25px;
+  margin-top: -40px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 12px;
+  display: block;
+  z-index: 7; }
+
+
+.bs-glyphicons {
+  padding-left: 0;
+  padding-bottom: 1px;
+  margin-bottom: 20px;
+  list-style: none;
+  overflow: hidden; }
+  .bs-glyphicons li {
+    float: left;
+    width: 25%;
+    height: 115px;
+    padding: 10px;
+    margin: 0 -1px -1px 0;
+    font-size: 12px;
+    line-height: 1.4;
+    text-align: center;
+    border: 1px solid #ddd; }
+  .bs-glyphicons .glyphicon {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    font-size: 24px; }
+  .bs-glyphicons .glyphicon-class {
+    display: block;
+    text-align: center;
+    word-wrap: break-word;
+    /* Help out IE10+ with class names */ }
+  .bs-glyphicons li:hover {
+    background-color: rgba(86, 61, 124, 0.1); }
+
+@media (min-width: 768px) {
+  .bs-glyphicons li {
+    width: 12.5%; } }
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /*# sourceMappingURL=app.css.map */

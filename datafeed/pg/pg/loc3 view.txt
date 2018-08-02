@@ -1,0 +1,34 @@
+SELECT
+    fuelsite.site AS sitenum,
+    fuelsite. NAME AS sitename,
+    fuelsite.address,
+    fuelsite.city,
+    fuelsite. STATE,
+    fuelsite.zip,
+    fuelsite.equipment,
+    fuelsite."station-name" AS stationname,
+    fuelsite."fuel-brand" AS fuelbrand,
+    fuelsite.phone,
+    fuelsite."net-site-ref" AS netsiteref,
+    MIN((CASE WHEN((notes."note-cat") :: TEXT = 'DIR' :: TEXT) THEN notes.txt ELSE NULL :: CHARACTER VARYING END) :: TEXT)AS dir,
+    MIN((CASE WHEN((notes."note-cat") :: TEXT = 'SVC' :: TEXT) THEN notes.txt ELSE NULL :: CHARACTER VARYING END) :: TEXT)AS svc,
+    MIN((CASE WHEN((notes."note-cat") :: TEXT = 'HWY' :: TEXT) THEN notes.txt ELSE 'none' :: CHARACTER VARYING END) :: TEXT)AS hwy,
+    locations.geom
+FROM
+    ((fuelsite LEFT JOIN notes ON((fuelsite. KEY = notes. KEY))) JOIN locations ON((fuelsite.site = locations.site)))
+WHERE
+    ((fuelsite."site-status") :: TEXT = 'A' :: TEXT)
+GROUP BY
+    fuelsite.site,
+    fuelsite. NAME,
+    fuelsite.address,
+    fuelsite.city,
+    fuelsite. STATE,
+    fuelsite.zip,
+    fuelsite."site-status",
+    fuelsite.equipment,
+    fuelsite."station-name",
+    fuelsite."fuel-brand",
+    fuelsite.phone,
+    fuelsite."net-site-ref",
+    locations.geom

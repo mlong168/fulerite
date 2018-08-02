@@ -7129,20 +7129,6 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/footer/footer.page.html',
-    '<footer class="main-footer">\n' +
-    '</footer>\n' +
-    '');
-}]);
-})();
-
-(function(module) {
-try {
-  module = angular.module('app.partials');
-} catch (e) {
-  module = angular.module('app.partials', []);
-}
-module.run(['$templateCache', function($templateCache) {
   $templateCache.put('./views/app/pages/forgot-password/forgot-password.page.html',
     '<div class="login-box">\n' +
     '  <div class="login-logo">\n' +
@@ -7216,12 +7202,10 @@ try {
   module = angular.module('app.partials', []);
 }
 module.run(['$templateCache', function($templateCache) {
-  $templateCache.put('./views/app/pages/layout/layout.page.html',
-    '<div ui-view="header"></div>\n' +
-    '<div class="content-wrapper">\n' +
-    '    <div ui-view="main"></div>\n' +
-    '</div>\n' +
-    '<div ui-view="footer"></div>');
+  $templateCache.put('./views/app/pages/footer/footer.page.html',
+    '<footer class="main-footer">\n' +
+    '</footer>\n' +
+    '');
 }]);
 })();
 
@@ -7253,6 +7237,22 @@ module.run(['$templateCache', function($templateCache) {
     '  </div>\n' +
     '</div>\n' +
     '');
+}]);
+})();
+
+(function(module) {
+try {
+  module = angular.module('app.partials');
+} catch (e) {
+  module = angular.module('app.partials', []);
+}
+module.run(['$templateCache', function($templateCache) {
+  $templateCache.put('./views/app/pages/layout/layout.page.html',
+    '<div ui-view="header"></div>\n' +
+    '<div class="content-wrapper">\n' +
+    '    <div ui-view="main"></div>\n' +
+    '</div>\n' +
+    '<div ui-view="footer"></div>');
 }]);
 })();
 
