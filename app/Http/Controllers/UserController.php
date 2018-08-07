@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\User;
 use App\Datasource;
+use App\Provider;
 use Auth;
 use Bican\Roles\Models\Permission;
 use Bican\Roles\Models\Role;
@@ -407,16 +408,19 @@ class UserController extends Controller
         return response()->success('success');
     }
      /**
-     * Create new datafeed.
+     * Create new dataprovider.
      *
      * @return JSON
      */
-    public function postDatafeed()
+    public function postDataprovider()
     {
         $alias = Input::get('datasource');
         $sql_param = Input::get('sql');
 
         $dataSync = Datasource::where('alias', '=', $alias)->first();
+        $dataSync->sql = $sql_param;
+        $dataSync->save();
+
         $driver = $dataSync->driver;
 
         Config::set('database.connections.' . $driver, array(
@@ -433,6 +437,64 @@ class UserController extends Controller
         //$sql_param = 'select * from fuelsite limit 10;';
         $response = DB::connection($driver)->select($sql_param);
 
-        return response()->success(compact('response'));
+        $keys = array();
+        
+        Provider::where('datasource', '=', $alias)->delete();
+
+        if (count($response) > 0) {
+            foreach($response[0] as $key=>$value) {
+              $keys[] = (object)array('column_id' => $key);
+
+              $provider = new Provider;
+              $provider->datasource = $alias;
+              $provider->column_id = $key;
+              $provider->title = $key;
+              $provider->save();
+            }
+        }
+        return response()->success($keys);
     }
+    /**
+     * Get all providers.
+     *
+     * @return JSON
+     */
+    public function getDataprovider()
+    {
+        $datasource_id = Input::get('datasource');
+
+        $datasource = DB::table('datasources')
+                    ->where('alias', '=', $datasource_id)->first();
+
+        $providers = DB::table('providers')
+                    ->select(['column_id', 'title'])
+                    ->where('datasource', '=', $datasource_id)->get();
+
+        $dataprovider[] = Array(
+            'providers' => $providers,
+            'sql' => $datasource->sql
+        );
+
+
+        return response()->success(compact('dataprovider'));
+    }
+    /**
+     * Delete provider by id.
+     *
+     * @param string column ID
+     *
+     * @return JSON
+     */
+    public function deleteDataprovider()
+    {
+        $datasource_id = Input::get('datasource_id');
+        $column_id = Input::get('column_id');
+
+        $status = DB::table('providers')
+                    ->where('datasource', '=', $datasource_id)
+                    ->where('column_id', '=', $column_id)
+                    ->delete();
+
+        return response()->success('success');
+    }    
 }

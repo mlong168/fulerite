@@ -37,8 +37,8 @@ $api->group(['middleware' => ['api', 'api.auth']], function ($api) {
 $api->group(['middleware' => ['api']], function ($api) {
     $api->get('feeds/data', 'FeedController@getData');
     $api->get('feeds/columns', 'FeedController@getColumns');
-    $api->get('users/datafeed', 'UserController@getDatafeed');
-    //$api->post('users/datasources', 'UserController@postDatasources');
+    $api->get('users/dataprovider', 'UserController@getDataprovider');
+    //$api->get('users/datasources', 'UserController@getDatasources');
 });
 
 $api->group(['middleware' => ['api', 'api.auth', 'role:admin.super|admin.user']], function ($api) {

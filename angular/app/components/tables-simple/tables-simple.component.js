@@ -21,7 +21,7 @@ class TablesSimpleController {
 
       Datafeed.post({
         'datasource': 'api',
-        'sql': this.sql
+        'sql': 'select * from trxfeed_history limit 10;'//this.sql
       }).then((response) => {
         this.dtColumns = []
         let dataSet = response.plain()
@@ -36,9 +36,9 @@ class TablesSimpleController {
         
         var keys = Object.keys(dataSet[0])
         
-        for (var index = 0;index < keys.length; index++){
+        for (var index = 0;index < this.$rootScope.$display_columns.length; index++){
 	
-          this.dtColumns.push(this.DTColumnBuilder.newColumn(keys[index]).withTitle(keys[index]))
+          this.dtColumns.push(this.DTColumnBuilder.newColumn(this.$rootScope.$display_columns[index]).withTitle(this.$rootScope.$display_columns[index]))
         }
 
         this.displayTable = true
