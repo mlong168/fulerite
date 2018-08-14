@@ -2,10 +2,20 @@
   <h1>ChartJS<small>Preview sample</small></h1>
   <ol class="breadcrumb">
     <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li class="active">User Lists</li>
+    <li class="active">Chart Data</li>
   </ol>
 </section>
 <section class="content">
+  <div class="row">
+    <div class="col-md-6">
+      <div class="form-group">
+        <label>Select Primary Field</label>
+        <select class="form-control" ng-model="vm.$rootScope.primary_field" ng-change="vm.changePrimaryField()">
+          <option ng-repeat="source in vm.$rootScope.providers" value="{{source.column_id}}">{{source.title}}</option>
+        </select>
+      </div>
+    </div>
+  </div>
   <div class="row">
     <div class="col-md-6">
       <div class="box box-primary">

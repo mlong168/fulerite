@@ -1,8 +1,7 @@
 class SettingDisplayController {
-  constructor ($rootScope, $scope, $state, $compile, DTOptionsBuilder, DTColumnBuilder, API, $stateParams) {
+  constructor ($rootScope, $scope, $state, $compile, DTOptionsBuilder, DTColumnBuilder, API) {
     'ngInject'
     this.API = API
-    this.$state = $state
     this.$rootScope = $rootScope
     this.formSubmitted = false
     this.alerts = []
@@ -17,7 +16,6 @@ class SettingDisplayController {
       .then((response) => {
         this.datasources = response.plain()        
       })
-
   }
 
   changeDatasource (){
@@ -25,15 +23,18 @@ class SettingDisplayController {
     let DTColumnBuilder = this.DTColumnBuilder
     let DTOptionsBuilder = this.DTOptionsBuilder
 
+    if (this.$rootScope.current_datasource == null) return
+
     Dataprovider.getList({
       'datasource': this.$rootScope.current_datasource
     }).then((response) => {
-      this.dtColumns = []
+      this.dtColumns = []                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             
       let dataSet = response.plain()
 
       if (dataSet.length == 0) return
-      this.sql = dataSet[0]['sql']
+      this.$rootScope.current_sql = dataSet[0]['sql']
       this.dataSet = dataSet[0]['providers']
+      this.$rootScope.providers = this.dataSet
 
       this.dtOptions = DTOptionsBuilder.newOptions()
         .withOption('data', this.dataSet)
@@ -41,8 +42,8 @@ class SettingDisplayController {
         .withOption('responsive', true)
         .withBootstrap()
       
-      this.dtColumns.push(this.DTColumnBuilder.newColumn('column_id').withTitle('ID'))
-      this.dtColumns.push(this.DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable().renderWith(actionsHtml))
+      this.dtColumns.push(DTColumnBuilder.newColumn('column_id').withTitle('ID'))
+      this.dtColumns.push(DTColumnBuilder.newColumn(null).withTitle('Actions').notSortable().renderWith(actionsHtml))
 
       this.displayTable = true
     })
@@ -60,16 +61,12 @@ class SettingDisplayController {
   }
 
   setDataprovider (isValid) {
-    //this.$state.go(this.$state.current, {}, { alerts: 'test' })
     if (isValid) {
       let Dataprovider = this.API.service('dataprovider', this.API.all('users'))
-      //let $state = this.$state
-      //let DTColumnBuilder = this.DTColumnBuilder
-      //let DTOptionsBuilder = this.DTOptionsBuilder
 
       Dataprovider.post({
         'datasource': this.$rootScope.current_datasource,
-        'sql': this.sql
+        'sql': this.$rootScope.current_sql
       }).then((response) => {
         var dataSet = response.plain()
         dataSet = dataSet['data']
@@ -83,8 +80,6 @@ class SettingDisplayController {
   }
   delete (fieldId) {
     let API = this.API
-    let $state = this.$state
-    
     let dtOptions = this.dtOptions
     let dataSet = dtOptions.data
 
@@ -120,7 +115,9 @@ class SettingDisplayController {
     //})
   }
 
-  $onInit () {}
+  $onInit () {
+    this.changeDatasource()
+  }
 }
 
 export const SettingDisplayComponent = {

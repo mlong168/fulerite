@@ -38,6 +38,7 @@ $api->group(['middleware' => ['api']], function ($api) {
     $api->get('feeds/data', 'FeedController@getData');
     $api->get('feeds/columns', 'FeedController@getColumns');
     $api->get('users/dataprovider', 'UserController@getDataprovider');
+    $api->get('users/datafeed', 'UserController@getDatafeed');
     //$api->get('users/datasources', 'UserController@getDatasources');
 });
 

@@ -423,7 +423,7 @@ class UserController extends Controller
 
         $driver = $dataSync->driver;
 
-        Config::set('database.connections.' . $driver, array(
+        Config::set('database.connections.' . $alias, array(
                 'driver'    => $driver,
                 'host'      => 'localhost',
                 'database'  => $dataSync->db_name,
@@ -435,7 +435,7 @@ class UserController extends Controller
         ));
 
         //$sql_param = 'select * from fuelsite limit 10;';
-        $response = DB::connection($driver)->select($sql_param);
+        $response = DB::connection($alias)->select($sql_param);
 
         $keys = array();
         
@@ -496,5 +496,72 @@ class UserController extends Controller
                     ->delete();
 
         return response()->success('success');
-    }    
+    }
+     /**
+     * Get data feed.
+     *
+     * @return JSON
+     */
+    public function getDatafeed()
+    {
+        $alias = 'api';//Input::get('datasource');
+
+        $dataSync = Datasource::where('alias', '=', $alias)->first();
+        $driver = $dataSync->driver;
+        $sql = $dataSync->sql;
+
+        Config::set('database.connections.' . $alias, array(
+                'driver'    => $driver,
+                'host'      => 'localhost',
+                'database'  => $dataSync->db_name,
+                'username'  => $dataSync->username,
+                'password'  => $dataSync->password,
+                'charset'   => 'utf8',
+                'collation' => 'utf8_general_ci',
+                'prefix'    => '',
+        ));
+
+        $datafeed = DB::connection($alias)->select($sql);
+        //$response = Array('datafeed' => $datafeed)
+        return response()->success(compact('datafeed'));
+    }
+     /**
+     * Get data feed.
+     *
+     * @return JSON
+     */
+    public function postDatafeed()
+    {
+        $alias = Input::get('datasource');
+        $draw = 0;
+        $length = 10;
+        $start = Input::get('start');
+
+        $dataSync = Datasource::where('alias', '=', $alias)->first();
+        $driver = $dataSync->driver;
+        $sql = $dataSync->sql;
+
+        Config::set('database.connections.' . $alias, array(
+                'driver'    => $driver,
+                'host'      => 'localhost',
+                'database'  => $dataSync->db_name,
+                'username'  => $dataSync->username,
+                'password'  => $dataSync->password,
+                'charset'   => 'utf8',
+                'collation' => 'utf8_general_ci',
+                'prefix'    => '',
+        ));
+
+        $datafeed = DB::connection($alias)->select($sql);
+        $recordsTotal = count($datafeed);
+        $datafeed = array_slice($datafeed, $start, $length);
+        $response = array(
+            'draw' => 'draw',
+            'recordsFiltered' => $recordsTotal, 
+            'recordsTotal' => $recordsTotal,
+            'data' => $datafeed 
+        );
+
+        return response()->json($response);
+    }            
 }
