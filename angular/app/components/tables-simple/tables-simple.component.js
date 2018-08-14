@@ -22,12 +22,10 @@ class TablesSimpleController {
     this.$rootScope.dtOptions = DTOptionsBuilder.newOptions()
       .withOption('ajax', {
         dataSrc: function(data){
-            console.log(data.data)
             return data.data
         },
         url: "/api/users/datafeed?datasource=" + this.$rootScope.current_datasource,
         data: function (d) {
-            console.log(d)
             //d.datasource = 'api'//this.$rootScope.current_datasource
         },
         type:"POST",

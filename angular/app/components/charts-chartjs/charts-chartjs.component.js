@@ -1,5 +1,5 @@
 class ChartsChartjsController {
-  constructor ($rootScope, $scope, FeedService) {
+  constructor ($rootScope, $scope) {
     'ngInject'
 
     this.$rootScope = $rootScope
@@ -43,7 +43,7 @@ class ChartsChartjsController {
   changePrimaryField () {
     if (this.$rootScope.primary_field){
       this.lineChartData = []
-      this.lineChartLabels = this.$rootScope.chart[this.$rootScope.primary]
+      this.lineChartLabels = this.$rootScope.chart[this.$rootScope.primary_field]
 
       for (var index = 0; index < this.$rootScope.providers.length; index++){
         var column_id = this.$rootScope.providers[index]['column_id']
